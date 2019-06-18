@@ -3,20 +3,17 @@
   "version": "0.1.0",
   "description": "Starter kit for PlayingWithProjections in reason",
   "license": "MIT",
-  "esy": {
-    "build": "refmterr dune build -p reason"
-  },
-  "scripts": {
-    "test": "esy x Hello"
-  },
+  "esy": { "build": "refmterr dune build -p reason" },
+  "scripts": { "test": "esy x Hello" },
   "dependencies": {
+    "@esy-ocaml/reason": ">= 3.4.0 < 3.5.0",
     "@opam/dune": "*",
+    "@opam/yojson": "1.7.0",
     "@reason-native/console": "*",
     "@reason-native/pastel": "*",
     "@reason-native/rely": "*",
-    "@esy-ocaml/reason": ">= 3.4.0 < 3.5.0",
-    "refmterr": "*",
-    "ocaml": "~4.6.0"
+    "ocaml": "~4.6.0",
+    "refmterr": "*"
   },
   "devDependencies": {
     "@opam/merlin": "*",
