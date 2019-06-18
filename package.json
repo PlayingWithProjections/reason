@@ -1,0 +1,26 @@
+{
+  "name": "@PlayingWithProjections/reason",
+  "version": "0.1.0",
+  "description": "Starter kit for PlayingWithProjections in reason",
+  "license": "MIT",
+  "esy": {
+    "build": "refmterr dune build -p reason"
+  },
+  "scripts": {
+    "test": "esy x Hello"
+  },
+  "dependencies": {
+    "@opam/dune": "*",
+    "@reason-native/console": "*",
+    "@reason-native/pastel": "*",
+    "@reason-native/rely": "*",
+    "@esy-ocaml/reason": ">= 3.4.0 < 3.5.0",
+    "refmterr": "*",
+    "ocaml": "~4.6.0"
+  },
+  "devDependencies": {
+    "@opam/merlin": "*",
+    "ocaml": "~4.6.0",
+    "@opam/odoc": "*"
+  }
+}

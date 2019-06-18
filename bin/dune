@@ -1,0 +1,4 @@
+(executables
+  (names CountEvents)
+  (public_names CountEvents)
+  (libraries lib))
