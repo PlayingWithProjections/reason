@@ -1,4 +1,4 @@
 (executable
   (name Challenges)
   (public_name Challenges)
-  (libraries lib))
+  (libraries lib calendar))
