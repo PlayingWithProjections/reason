@@ -11,4 +11,4 @@ You need Esy, you can install the beta using [npm](https://npmjs.com):
 Then run the `esy` command from this project root to install and build depenencies.
 
     % esy
-    % esy x CountEvents
+    % esy x Challenges

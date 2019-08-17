@@ -1,4 +1,4 @@
-(executables
-  (names CountEvents)
-  (public_names CountEvents)
+(executable
+  (name Challenges)
+  (public_name Challenges)
   (libraries lib))
