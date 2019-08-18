@@ -13,12 +13,12 @@
     "@reason-native/console": "*",
     "@reason-native/pastel": "*",
     "@reason-native/rely": "*",
-    "ocaml": "~4.6.0",
+    "ocaml": "~4.7.0",
     "refmterr": "*"
   },
   "devDependencies": {
     "@opam/merlin": "*",
-    "ocaml": "~4.6.0",
+    "ocaml": "~4.7.0",
     "@opam/odoc": "*"
   }
 }
