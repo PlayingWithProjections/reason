@@ -23,7 +23,7 @@ let parseMonth = timestamp => {
 
 let countEvents = () => {
   let counter = (count, _event) => count + 1;
-  let outcome = EventStore.subscribe(Types.Basic, 0, counter);
+  let outcome = EventStore.subscribe(Types.Full, 0, counter);
 
   outcome;
 };
@@ -34,7 +34,7 @@ let countRegisteredPlayers = () => {
     | Events.PlayerHasRegistered(_) => count + 1
     | _ => count
     };
-  let outcome = EventStore.subscribe(Types.Basic, 0, counter);
+  let outcome = EventStore.subscribe(Types.Full, 0, counter);
 
   outcome;
 };
@@ -56,7 +56,7 @@ let countRegisteredPlayersPerMonth = () => {
       );
     | _ => monthMap
     };
-  let outcome = EventStore.subscribe(Types.Basic, MonthMap.empty, counter);
+  let outcome = EventStore.subscribe(Types.Full, MonthMap.empty, counter);
 
   MonthMap.iter((key, val') => {Console.log((key, val'))}, outcome);
   "-";
@@ -173,7 +173,7 @@ module FindMostPopularQuizzes = {
       gameIdToQuizId: StringMap.empty,
       gamesPerMonth: MonthMap.empty,
     };
-    let outcome = EventStore.subscribe(Types.Basic, emptyState, projection);
+    let outcome = EventStore.subscribe(Types.Full, emptyState, projection);
 
     MonthMap.iter(
       (key, val') => {

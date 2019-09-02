@@ -1,2 +1,1 @@
-type stream = | Basic;
-type event = | Foo;
+type stream = | Basic | Full;

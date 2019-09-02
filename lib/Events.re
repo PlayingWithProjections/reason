@@ -1,3 +1,5 @@
+open! Base;
+
 type event = {
   id: string,
   timestamp: string,
@@ -131,7 +133,7 @@ let read = filename => {
   };
   let json = Yojson.Basic.from_file(filename);
   switch (json) {
-  | `List(events) => List.map(parseEvent, events)
+  | `List(events) => List.map(~f=parseEvent, events)
   | _ => raise(InvalidFormat("expected a json list"))
   };
 };

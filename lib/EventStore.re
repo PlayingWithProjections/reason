@@ -1,8 +1,11 @@
+open! Base;
+
 type subscriber('a) = ('a, Events.event) => 'a;
 let subscribe = (stream, initialState, subscriber) => {
-	switch (stream) {
-		| Types.Basic => 
-			let events = Events.read("../data/0.json");
-			List.fold_left(subscriber, initialState, events)
-	}
-}
+  let events =
+    switch (stream) {
+    | Types.Basic => Events.read("../data/basic.json")
+    | Types.Full => Events.read("../data/full.json")
+    };
+  List.fold_left(~f=subscriber, ~init=initialState, events);
+};
